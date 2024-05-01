@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:movie_flutter/utils/color.dart';
 import 'package:movie_flutter/utils/dimensions.dart';
 import 'package:movie_flutter/widget/BigText.dart';
+import 'package:movie_flutter/widget/button_favoite.dart';
 
 class SelectYourFavoite extends StatefulWidget {
   const SelectYourFavoite({Key? key}) : super(key: key);
@@ -26,7 +27,47 @@ class _SelectYourFavoiteState extends State<SelectYourFavoite> {
             SizedBox(height: Dimentions.height20,),
             BigText(text: "Select Your \nFavoite Genre", color: Colors.white, textAlign: TextAlign.left,),
             SizedBox(height: Dimentions.height20,),
-
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ButtonFavoite(text: "Horor"),
+                ButtonFavoite(text: "Action")
+              ],
+            ),
+            SizedBox(height: Dimentions.height20,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ButtonFavoite(text: "Drama"),
+                ButtonFavoite(text: "War")
+              ],
+            ),
+            SizedBox(height: Dimentions.height20,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ButtonFavoite(text: "Camedy"),
+                ButtonFavoite(text: "Crime")
+              ],
+            ),
+            SizedBox(height: Dimentions.height20,),
+            BigText(text: "Select Your \nFavoite language", color: Colors.white, textAlign: TextAlign.left,),
+            SizedBox(height: Dimentions.height20,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ButtonFavoite(text: "Bahasa"),
+                ButtonFavoite(text: "English")
+              ],
+            ),
+            SizedBox(height: Dimentions.height20,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ButtonFavoite(text: "Japanese"),
+                ButtonFavoite(text: "Korean")
+              ],
+            ),
           ],
         ),
       ),
