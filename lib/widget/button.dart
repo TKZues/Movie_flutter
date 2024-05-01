@@ -6,7 +6,11 @@ class Button extends StatelessWidget {
    double sizeText ;
    final Color buttonColor;
    final Color colortext;
-   Button({Key? key, required this.text, required this.colortext, this.sizeText = 0, required this.buttonColor}) : super(key: key);
+    double left;
+    double right;
+    double top;
+    double bottom;
+   Button({Key? key, required this.text, required this.colortext, this.sizeText = 0, required this.buttonColor, this.left = 0, this.right = 0, this.top=0, this.bottom=0}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +25,7 @@ class Button extends StatelessWidget {
               ),
             ),
             padding: MaterialStateProperty.all<EdgeInsets>(
-              EdgeInsets.only(left: Dimentions.width30*3, right: Dimentions.width30*3, top: Dimentions.height10, bottom: Dimentions.height10),)
+              EdgeInsets.only(left: left==0?(Dimentions.width30*3):left, right: right==0?Dimentions.width30*3:right, top: Dimentions.height10, bottom: Dimentions.height10),)
           ),
           child: Text(
           text,

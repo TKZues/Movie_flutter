@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie_flutter/flow/welcome/get_api.dart';
+
 import 'package:movie_flutter/utils/dimensions.dart';
 import 'package:movie_flutter/widget/button.dart';
 import 'package:movie_flutter/widget/small_text.dart';

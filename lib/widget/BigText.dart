@@ -18,6 +18,7 @@ class BigText extends StatelessWidget {
           fontSize: size==0?Dimentions.font20:size,
         color: color,
         overflow: textOverflow,
+        fontWeight: FontWeight.w500
       ),
 
     );

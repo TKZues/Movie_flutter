@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movie_flutter/flow/create_new_your_account.dart';
-import 'package:movie_flutter/flow/home.dart';
-import 'package:movie_flutter/flow/new_experience.dart';
-import 'package:movie_flutter/flow/select_your_favoite.dart';
-import 'package:movie_flutter/flow/welcome/welcome.dart';
+import 'package:movie_flutter/flow/new_user/confirm_new_account.dart';
+import 'package:movie_flutter/flow/new_user/home.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -39,7 +36,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // flutter emulators --launch Pixel 4 API 30
-      home: SelectYourFavoite(),
+      home: ConfirmNewAccount(),
     );
   }
 }
