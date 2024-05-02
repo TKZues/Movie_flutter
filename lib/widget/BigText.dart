@@ -4,8 +4,8 @@ import 'package:movie_flutter/utils/dimensions.dart';
 class BigText extends StatelessWidget {
   final String text;
   final Color color;
-  double size;
-  TextOverflow textOverflow;
+  final double size;
+  final TextOverflow textOverflow;
   final TextAlign textAlign;
    BigText({Key? key, required this.text, required this.color, this.size = 0,this.textOverflow = TextOverflow.ellipsis,  this.textAlign =  TextAlign.center  }) : super(key: key);
 
