@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movie_flutter/flow/new_user/confirm_new_account.dart';
 import 'package:movie_flutter/flow/new_user/home.dart';
 import 'package:get/get.dart';
+import 'package:movie_flutter/flow/order_ticket/find_best/home_login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // flutter emulators --launch Pixel 4 API 30
-      home: ConfirmNewAccount(),
+      home: HomeLogin(),
     );
   }
 }

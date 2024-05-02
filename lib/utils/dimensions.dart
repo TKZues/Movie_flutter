@@ -4,7 +4,7 @@ class Dimentions{
   static double screenWidth = Get.context!.width;
 
   //input
-  static double pageView = screenHeight/4.93;
+
   //padding;
   static double width2 = screenWidth/390.5;
   static double with10 = screenWidth/39.27;
@@ -15,7 +15,7 @@ class Dimentions{
   static double height30 = screenHeight/19.73;
   static double height50 = screenHeight/15.62;
   //liên quan đến font và radius
-
+  static double font10 = screenHeight/78.1;
   static double font16 = screenHeight/48.81;
   static double font20 = screenHeight/39.05;
   static double font26 = screenHeight/30.04;
@@ -37,5 +37,12 @@ class Dimentions{
 
   //input
   static double height70 = screenHeight/11.16;
-
+  //search movie
+  static double widthmovie = screenWidth/1.45;
+  //mow playing
+  static double pageViewNowPlaying = screenHeight/3.91;
+  static double pageView = screenHeight/3.4;
+  static double heightNowPlaying = screenHeight/3.91;
+  //coming soon
+  static double widthComingSoon = screenHeight/13.09;
 }
