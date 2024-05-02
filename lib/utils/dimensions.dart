@@ -16,6 +16,7 @@ class Dimentions{
   static double height50 = screenHeight/15.62;
   //liên quan đến font và radius
   static double font10 = screenHeight/78.1;
+  static double font12 = screenHeight/65.08;
   static double font16 = screenHeight/48.81;
   static double font20 = screenHeight/39.05;
   static double font26 = screenHeight/30.04;
@@ -45,4 +46,6 @@ class Dimentions{
   static double heightNowPlaying = screenHeight/3.91;
   //coming soon
   static double widthComingSoon = screenHeight/13.09;
+  //cast and crew
+  static double widthCast = screenHeight/7.85;
 }

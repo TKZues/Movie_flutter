@@ -3,6 +3,7 @@ import 'package:movie_flutter/flow/new_user/confirm_new_account.dart';
 import 'package:movie_flutter/flow/new_user/home.dart';
 import 'package:get/get.dart';
 import 'package:movie_flutter/flow/order_ticket/find_best/home_login.dart';
+import 'package:movie_flutter/flow/order_ticket/teaser_trailer/teaser_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // flutter emulators --launch Pixel 4 API 30
-      home: HomeLogin(),
+      home: TeaserHome(),
     );
   }
 }
