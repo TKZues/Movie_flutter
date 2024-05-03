@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_flutter/flow/new_user/create_new_your_account.dart';
 
 import 'package:movie_flutter/utils/dimensions.dart';
 import 'package:movie_flutter/widget/button.dart';
@@ -19,7 +20,7 @@ class _WelcomeState extends State<Welcome> {
   late TextEditingController emailController = TextEditingController();
   late TextEditingController passwordController = TextEditingController();
 
-  bool isButtonEnabled = false;
+  bool _isButtonEnabled = false;
 
   @override
   void initState() {
@@ -39,10 +40,15 @@ class _WelcomeState extends State<Welcome> {
 
   void updateButtonState() {
     setState(() {
-      isButtonEnabled = emailController.text.isEmpty && passwordController.text.isEmpty;
+      _isButtonEnabled = emailController.text.isNotEmpty && passwordController.text.isNotEmpty;
     });
   }
-
+  void navigateToCreateNewAccount(){
+    Navigator.push(
+        context, 
+        MaterialPageRoute(builder: (context) => CreateNewYourAccount(),)
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +81,12 @@ class _WelcomeState extends State<Welcome> {
                   )
               ),
               SizedBox(height: Dimentions.height20,),
-              Button(text: "Login", colortext: Colors.white, buttonColor: isButtonEnabled ? const Color(0xff1b263b) : Colors.red),
+              Button(
+                text: "Login",
+                colortext: Colors.white,
+                buttonColor: _isButtonEnabled ?Colors.red :const Color(0xff1b263b),
+                onPressed: _isButtonEnabled?navigateToCreateNewAccount:null,
+              ),
               SizedBox(height: Dimentions.height20,),
               Container(
                 child: Row(

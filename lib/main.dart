@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:movie_flutter/flow/my_ticket/myticket.dart';
 import 'package:movie_flutter/flow/my_ticket/ticket_detail.dart';
+import 'package:movie_flutter/flow/my_wallet/home_mywallet.dart';
+import 'package:movie_flutter/flow/my_wallet/top_up.dart';
+import 'package:movie_flutter/flow/my_wallet/topup_success.dart';
 import 'package:movie_flutter/flow/new_user/confirm_new_account.dart';
 import 'package:movie_flutter/flow/new_user/home.dart';
 import 'package:get/get.dart';
@@ -8,12 +11,17 @@ import 'package:movie_flutter/flow/order_ticket/checkout_movie.dart';
 import 'package:movie_flutter/flow/order_ticket/find_best/home_login.dart';
 import 'package:movie_flutter/flow/order_ticket/happy_watching.dart';
 import 'package:movie_flutter/flow/order_ticket/teaser_trailer/teaser_home.dart';
+import 'package:movie_flutter/flow/profile/edit_your_profile.dart';
+import 'package:movie_flutter/flow/profile/home_profile.dart';
 
 import 'flow/order_ticket/choose_datetime/home_datetime.dart';
 
 void main() {
   runApp(const MyApp());
 }
+
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -44,7 +52,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // flutter emulators --launch Pixel 4 API 30
-      home: TicketDetail(),
+      home: Home(),
     );
   }
 }

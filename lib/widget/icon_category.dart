@@ -7,7 +7,8 @@ class IconCategory extends StatelessWidget {
   final IconData icon;
   double size;
   final Color background;
-  IconCategory({Key? key, required this.icon, required this.background, this.size = 0}) : super(key: key);
+  double  radius;
+  IconCategory({Key? key, required this.icon, required this.background, this.size = 0, this.radius = 0}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class IconCategory extends StatelessWidget {
       width:  Dimentions.height70,
       padding: EdgeInsets.all(Dimentions.with10),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(Dimentions.radius15),
+        borderRadius: BorderRadius.circular(radius),
         color: background
       ),
       child: Icon(

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:movie_flutter/flow/new_user/select_your_favoite.dart';
 import 'package:movie_flutter/utils/color.dart';
 import 'package:movie_flutter/utils/dimensions.dart';
 import 'package:movie_flutter/widget/BigText.dart';
@@ -19,7 +20,7 @@ class _CreateNewYourAccountState extends State<CreateNewYourAccount> {
   late TextEditingController addressController = TextEditingController();
   late TextEditingController passwordController = TextEditingController();
   late TextEditingController confirmController = TextEditingController();
-  bool isButtonEnabled1 = true;
+  bool _isButtonEnabled1 = false;
 
   @override
   void initState() {
@@ -45,8 +46,13 @@ class _CreateNewYourAccountState extends State<CreateNewYourAccount> {
 
   void updateButtonState1() {
     setState(() {
-      isButtonEnabled1 = nameController.text.isEmpty && addressController.text.isEmpty && passwordController.text.isEmpty && confirmController.text.isEmpty ;
+      _isButtonEnabled1 = nameController.text.isNotEmpty && addressController.text.isNotEmpty && passwordController.text.isNotEmpty && confirmController.text.isNotEmpty ;
     });
+  }
+  void navigateToSelectYourFavoite(){
+    Navigator.push(
+        context, 
+        MaterialPageRoute(builder: (context) => SelectYourFavoite(),));
   }
 
   @override
@@ -83,7 +89,12 @@ class _CreateNewYourAccountState extends State<CreateNewYourAccount> {
                         SizedBox(height: Dimentions.height20,),
                         Input(textHint: "Confirm password", controller: confirmController,),
                         SizedBox(height: Dimentions.height20,),
-                        Button(text: "Sign In", colortext: Colors.white, buttonColor: isButtonEnabled1?AppColors.button: Color(0xff003f88) )
+                        Button(
+                            text: "Sign In",
+                            colortext: Colors.white,
+                            buttonColor: _isButtonEnabled1?AppColors.button_final: AppColors.button_default,
+                            onPressed: _isButtonEnabled1?navigateToSelectYourFavoite:null,
+                        )
                       ],
                     ),
                   ),
