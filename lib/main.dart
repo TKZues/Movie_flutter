@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_flutter/flow/my_ticket/myticket.dart';
+import 'package:movie_flutter/flow/my_ticket/ticket_detail.dart';
 import 'package:movie_flutter/flow/new_user/confirm_new_account.dart';
 import 'package:movie_flutter/flow/new_user/home.dart';
 import 'package:get/get.dart';
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // flutter emulators --launch Pixel 4 API 30
-      home: MyTicket(),
+      home: TicketDetail(),
     );
   }
 }
