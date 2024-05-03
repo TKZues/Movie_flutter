@@ -48,4 +48,7 @@ class Dimentions{
   static double widthComingSoon = screenHeight/13.09;
   //cast and crew
   static double widthCast = screenHeight/7.85;
+
+  //myticket
+  static double heightMyTicket = screenHeight/1.3;
 }

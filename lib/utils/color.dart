@@ -16,4 +16,5 @@ class AppColors{
   static final Color back = const Color(0xff001d3d);
   static final Color outline = const Color(0xff23395d);
   static final Color button = const Color(0xff1b263b);
+  static final Color button_final = const Color(0xff2946C3);
 }
