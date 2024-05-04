@@ -4,9 +4,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:movie_flutter/effect/list_cast.dart';
+import 'package:movie_flutter/flow/order_ticket/choose_datetime/home_datetime.dart';
 import 'package:movie_flutter/utils/color.dart';
 import 'package:movie_flutter/utils/dimensions.dart';
 import 'package:movie_flutter/widget/BigText.dart';
+import 'package:movie_flutter/widget/icon_button.dart';
 import 'package:movie_flutter/widget/small_text.dart';
 import 'package:movie_flutter/widget/video_trailer.dart';
 
@@ -129,7 +131,13 @@ class _TeaserHomeState extends State<TeaserHome> {
 
                     child: VideoTrailer(),
                   ),
-                  BigText(text: "text", color: Colors.white)
+                  SizedBox(height: Dimentions.height20,),
+                  IconForButton(icon: Icons.arrow_forward_outlined, backgroundColor: AppColors.button_final, onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomeDatetime(),)
+                        );
+                  })
                 ],
               ),
             ),

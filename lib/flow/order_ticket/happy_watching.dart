@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_flutter/flow/my_ticket/myticket.dart';
 import 'package:movie_flutter/utils/color.dart';
 import 'package:movie_flutter/widget/BigText.dart';
 import 'package:movie_flutter/widget/button.dart';
@@ -33,7 +34,15 @@ class _HappyWatchingState extends State<HappyWatching> {
             SizedBox(height: Dimentions.height10,),
             SmallText(text: "You have successful bought the ticket", color: Colors.white70),
             SizedBox(height: Dimentions.height70,),
-            Button(text: "My TicKet", colortext: Colors.white, buttonColor: AppColors.button_final),
+            GestureDetector(
+              child: Button(text: "My TicKet", colortext: Colors.white, buttonColor: AppColors.button_final),
+              onTap: () {
+                Navigator.push(
+                    context, 
+                    MaterialPageRoute(builder: (context) => MyTicket(),)
+                );
+              },
+            ),
             SizedBox(height: Dimentions.height20,),
             Row(
               children: [

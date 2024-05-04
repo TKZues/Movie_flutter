@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_flutter/flow/profile/edit_your_profile.dart';
 import 'package:movie_flutter/utils/color.dart';
 import 'package:movie_flutter/widget/BigText.dart';
 import 'package:movie_flutter/widget/dotted_line.dart';
@@ -45,7 +46,15 @@ class _HomeProfileState extends State<HomeProfile> {
                             children: [
                               Icon(Icons.supervised_user_circle_sharp, color: Colors.blue,),
                               SizedBox(width: Dimentions.with10/2,),
-                              SmallText(text: "Edit Profile", color: Colors.white,size: Dimentions.font18,)
+                              GestureDetector(
+                                child: SmallText(text: "Edit Profile", color: Colors.white,size: Dimentions.font18,),
+                                onTap: () {
+                                  Navigator.push(
+                                      context, 
+                                      MaterialPageRoute(builder: (context) => EditYourProfile(),)
+                                  );
+                                },
+                              )
                             ],
                           ),
                           SizedBox(height: Dimentions.height30/2,),

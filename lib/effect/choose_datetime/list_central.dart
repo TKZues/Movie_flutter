@@ -35,7 +35,7 @@ class _ListDateState extends State<ListCentral> {
               },
               style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.only(left: Dimentions.with20, right: Dimentions.with20,),
-                  backgroundColor: strClick == date[index]?Colors.grey: AppColors.button,
+                  backgroundColor: strClick == date[index]?AppColors.button_final: AppColors.button_default,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(Dimentions.radius15),
                   ),

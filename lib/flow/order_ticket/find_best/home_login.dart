@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:movie_flutter/effect/list_comingsoon.dart';
 import 'package:movie_flutter/effect/type.dart';
+import 'package:movie_flutter/flow/my_wallet/home_mywallet.dart';
+import 'package:movie_flutter/flow/profile/home_profile.dart';
 import 'package:movie_flutter/utils/color.dart';
 import 'package:movie_flutter/utils/dimensions.dart';
 import 'package:movie_flutter/widget/BigText.dart';
@@ -44,13 +46,21 @@ class _HomeState extends State<HomeLogin> {
                       size: Dimentions.font26,
                       color: Colors.white,
                       textAlign: TextAlign.start,),
-                    Image(
-                        width: Dimentions.logo50,
-                        height: Dimentions.logo50,
-                        fit: BoxFit.cover,
-                        image: AssetImage(
-                            "assets/image/avatar_confirm.png"
-                        )
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context, 
+                            MaterialPageRoute(builder: (context) => HomeProfile(),)
+                        );
+                      },
+                      child: Image(
+                          width: Dimentions.logo50,
+                          height: Dimentions.logo50,
+                          fit: BoxFit.cover,
+                          image: AssetImage(
+                              "assets/image/avatar_confirm.png"
+                          )
+                      ),
                     )
                   ],
                 ),
@@ -109,7 +119,15 @@ class _HomeState extends State<HomeLogin> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     IconSelect(icon: Icons.home_filled, text: "Movies"),
-                    IconSelect(icon: Icons.account_balance_wallet_outlined, text: "Wallet"),
+                    GestureDetector(
+                      child: IconSelect(icon: Icons.account_balance_wallet_outlined, text: "Wallet"),
+                      onTap: () {
+                        Navigator.push(
+                            context, 
+                            MaterialPageRoute(builder: (context) => HomeMyWallet(),)
+                        );
+                      },
+                    ),
                     IconSelect(icon: Icons.airplane_ticket_rounded, text: "My Ticket"),
                   ],
                 ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_flutter/flow/order_ticket/happy_watching.dart';
 import 'package:movie_flutter/utils/color.dart';
 import 'package:movie_flutter/widget/BigText.dart';
 import 'package:movie_flutter/widget/button.dart';
@@ -128,7 +129,15 @@ class _CheckoutMovieState extends State<CheckoutMovie> {
                   ],
                 ),
                 SizedBox(height: Dimentions.height20,),
-                Button(text: "Checkout", colortext: Colors.white, buttonColor: Colors.blueAccent)
+                GestureDetector(
+                  child: Button(text: "Checkout", colortext: Colors.white, buttonColor: Colors.blueAccent),
+                  onTap: () {
+                    Navigator.push(
+                        context, 
+                        MaterialPageRoute(builder: (context) => HappyWatching(),)
+                    );
+                  },
+                )
               ],
             ),
             Icon(Icons.arrow_back_outlined, color: Colors.white,)

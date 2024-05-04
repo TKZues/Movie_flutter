@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_flutter/flow/my_wallet/home_mywallet.dart';
 import 'package:movie_flutter/utils/color.dart';
 import 'package:movie_flutter/widget/BigText.dart';
 import 'package:movie_flutter/widget/button.dart';
@@ -29,7 +30,15 @@ class _TopUpSuccessState extends State<TopUpSuccess> {
             SizedBox(height: Dimentions.height20,),
             SmallText(text: "You have successful \ntop up the wallet", color: Colors.white70),
             SizedBox(height: Dimentions.height50,),
-            Button(text: "My Wallet", colortext: Colors.white, buttonColor: AppColors.button_final, left: Dimentions.width30*2, right: Dimentions.width30*2,),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context, 
+                    MaterialPageRoute(builder: (context) => HomeMyWallet(),)
+                );
+              },
+              child:Button(text: "My Wallet", colortext: Colors.white, buttonColor: AppColors.button_final, left: Dimentions.width30*2, right: Dimentions.width30*2,),
+            ),
             SizedBox(height: Dimentions.height20,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
