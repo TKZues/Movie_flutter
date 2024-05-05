@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:movie_flutter/data/screens/account/account_screen.dart';
+import 'package:movie_flutter/data/screens/account/accounts_screen.dart';
+import 'package:movie_flutter/data/screens/login_account/loginaccounts_screen.dart';
 import 'package:movie_flutter/flow/my_ticket/myticket.dart';
 import 'package:movie_flutter/flow/my_ticket/ticket_detail.dart';
 import 'package:movie_flutter/flow/my_wallet/home_mywallet.dart';
@@ -14,7 +17,8 @@ import 'package:movie_flutter/flow/order_ticket/teaser_trailer/teaser_home.dart'
 import 'package:movie_flutter/flow/profile/edit_your_profile.dart';
 import 'package:movie_flutter/flow/profile/home_profile.dart';
 import 'package:movie_flutter/flow/order_ticket/screen.dart';
-
+import 'package:movie_flutter/test/test.dart';
+import 'data/screens/delete.dart';
 import 'flow/order_ticket/choose_datetime/home_datetime.dart';
 
 void main() {
@@ -30,7 +34,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -53,7 +57,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // flutter emulators --launch Pixel 4 API 30
-      home: Home(),
+      home: LoginAccountsScreen(),
     );
   }
 }
